@@ -9,6 +9,7 @@ await cpuzCollection.getCollection();
 
 let ui = new UI(cpuzCollection);
 ui.generateTable();
+ui.generateNbCpuz();
 
 document.getElementById("price").addEventListener("click", (e)=>{
     Event.sortColumn(e);
@@ -18,4 +19,5 @@ document.getElementById("price").addEventListener("click", (e)=>{
 document.getElementById("search").addEventListener("input", (e)=>{
     Event.search(e);
     ui.generateTable();
+    ui.generateNbCpuz();
 })

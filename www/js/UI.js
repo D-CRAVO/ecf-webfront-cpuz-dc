@@ -2,6 +2,7 @@ class UI{
     constructor(_collection){
         this.collection = _collection;
         this.tbody = document.getElementById("tbody");
+        this.footer = document.getElementById("nbCpuz");
     }
 
     generateTable(){
@@ -25,6 +26,10 @@ class UI{
         let cell = document.createElement("td");
         cell.textContent = val;
         return cell;
+    }
+
+    generateNbCpuz(){
+        this.footer.textContent = this.collection.calculateNbCpuz()
     }
 }
 

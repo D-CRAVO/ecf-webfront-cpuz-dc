@@ -27,6 +27,11 @@ class Collection{
         let search = val.trim().toLowerCase()
         this.collection = this.collectionWork.filter(c => c.completeName.toLowerCase().includes(search))
     }
+
+    calculateNbCpuz(){
+        console.log(this.collection.length)
+        return this.collection.length;
+    }
 }
 
 export {Collection}
