@@ -22,6 +22,11 @@ class Collection{
             this.collection.reverse();
         }
     }
+
+    searchCollection(val){
+        let search = val.trim().toLowerCase()
+        this.collection = this.collectionWork.filter(c => c.completeName.toLowerCase().includes(search))
+    }
 }
 
 export {Collection}

@@ -14,3 +14,8 @@ document.getElementById("price").addEventListener("click", (e)=>{
     Event.sortColumn(e);
     ui.generateTable();
 })
+
+document.getElementById("search").addEventListener("input", (e)=>{
+    Event.search(e);
+    ui.generateTable();
+})
