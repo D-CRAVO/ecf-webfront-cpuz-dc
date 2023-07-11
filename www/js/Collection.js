@@ -16,6 +16,12 @@ class Collection{
         this.collectionWork = Array.from(this.collection)
     }
 
+    /**
+     * Trie le tableau par ordre croissant ou décroissant
+     * en fonction des paramètres envoyés depuis la classe Event
+     * @param {*} name 
+     * @param {Bool} sortDirection 
+     */
     sortCollection(name, sortDirection){
         this.collection.sort((a,b) => a[name] - b[name]);
         if (!sortDirection){
@@ -23,6 +29,11 @@ class Collection{
         }
     }
 
+    /**
+     * Effectue la recherche sur le nom complet des cpuz
+     * en fonction des paramètres envoyés depuis la classe Event
+     * @param {string} val 
+     */
     searchCollection(val){
         let search = val.trim().toLowerCase()
         this.collection = this.collectionWork.filter(c => c.completeName.toLowerCase().includes(search))
