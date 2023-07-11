@@ -2,12 +2,19 @@ import { Db } from "./Db.js";
 import { Item } from "./Item.js";
 
 class Collection{
+    /**
+     * Constructeur
+     * Initialise les données de la classe
+     */
     constructor(){
         this.collection = [];
         this.collectionWork = [];
         this.source = "/cpuz.json"
     }
 
+    /**
+     * Chargement des données
+     */
     async getCollection(){
         let data =  await Db.fetchData(this.source);
         console.log(data);
@@ -19,7 +26,7 @@ class Collection{
     /**
      * Trie le tableau par ordre croissant ou décroissant
      * en fonction des paramètres envoyés depuis la classe Event
-     * @param {*} name 
+     * @param {String} name 
      * @param {Bool} sortDirection 
      */
     sortCollection(name, sortDirection){
@@ -39,8 +46,11 @@ class Collection{
         this.collection = this.collectionWork.filter(c => c.completeName.toLowerCase().includes(search))
     }
 
+    /**
+     * Calcule le nombre de cpuz affichés
+     * @returns nombre de cpuz affichés
+     */
     calculateNbCpuz(){
-        console.log(this.collection.length)
         return this.collection.length;
     }
 }
