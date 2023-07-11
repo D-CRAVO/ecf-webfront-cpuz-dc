@@ -18,8 +18,71 @@ body {
     font-size: 1.6rem;
     color: var(--primary-text);
     background: var(--primary-background);
+    font-family: 'Roboto', sans-serif;
 }
 
 body > header {
     margin-bottom: 2rem;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top img{
+    width: 15%;
+}
+
+h1{
+    font-size: 7rem;
+}
+
+fieldset{
+    border: none;
+    text-align: center;
+    padding: 0 50rem;
+}
+
+fieldset input{
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+table, td, th{
+    border: 1px solid var(--primary-text);
+    border-collapse: collapse;
+}
+
+table{
+    margin: 0 auto;
+}
+
+td, th{
+    text-align: center;
+    padding: 1rem
+}
+
+td:last-child{
+    text-align: left;
+}
+
+tbody tr:hover,
+tbody tr:nth-child(odd):hover{
+    background-color: var(--hover-color);
+}
+
+thead{
+    background-color: var(--hover-color);
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--secondary-background);
+    color: var(--secondary-text)
+}
+
+footer{
+    text-align: center;
+    text-transform: uppercase;
 }
