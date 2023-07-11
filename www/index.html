@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPUZ</title>
     <link rel="stylesheet" href="css/style-cpuz.css">
+    <link rel="shortcut icon" href="/img/LOGO_DavidCRAVO.png" type="image/x-icon">
     <script src="js/main-cpuz.js" type="module"></script>
 </head>
 <body>
@@ -19,16 +20,23 @@
     </header>
     <main>
         <table>
-            <thead>
-            <tr>
-                <th>Identifiant</th>
-                <th>Marque</th>
-                <th>Famille</th>
-                <th>Modèle</th>
-                <th>Fréquence (Ghz)</th>
-                <th>Nom complet</th>
-            </tr>
+            <thead id="thead">
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Marque</th>
+                    <th>Famille</th>
+                    <th>Modèle</th>
+                    <th>Fréquence (Ghz)</th>
+                    <th id="price" data-name="price">Prix</th>
+                    <th>Nom complet</th>
+                </tr>
             </thead>
+            <tbody id="tbody">
+
+            </tbody>
+            <tfoot id="tfoot">
+
+            </tfoot>
         </table>
     </main>
     <footer>

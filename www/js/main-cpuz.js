@@ -1,1 +1,16 @@
-console.log('Hello World !');
+import {Collection} from "./Collection.js"
+import {UI} from "./UI.js"
+import {Event} from "./Event.js"
+
+let cpuzCollection = new Collection();
+Event.collection = cpuzCollection;
+
+await cpuzCollection.getCollection();
+
+let ui = new UI(cpuzCollection);
+ui.generateTable();
+
+document.getElementById("price").addEventListener("click", (e)=>{
+    Event.sortColumn(e);
+    ui.generateTable();
+})
